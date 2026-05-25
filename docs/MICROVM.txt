@@ -1,0 +1,75 @@
+(Transcribed by TurboScribe. Go Unlimited to remove this message.)
+
+9.43pm. So I'm gonna define this properly. What do you mean by properly? What do you mean by properly? I'm going to be defining a microVM. A microVM is, let's talk about the fundamental problems of microVM. 
+
+What is the fundamental problem of microVM? A micro virtual machine. A micro a native service in an unsupported environment. How to run a native service in an unsupported environment? That's the question. 
+
+What is a microVM? A microVM allows you to run an unsupported service in an unsupported, a native service in an unsupported environment. It's micro-isolation. Primarily, a microVM serves as not a bridge but actual native service in an isolated environment, in an unsupported, isolated environment. 
+
+It works because it's beautiful. It's a continualization. It's like a docker. 
+
+You have docker. Docker works in a way that is, docker works by containing, it basically works, uses native services to contain for environment. A microVM doesn't use, and the difference between docker and a microVM, my mispronunciation of microscript, M for Mike, I for Indigo, C for Charlie, R for Romeo, O for Oscar, is that a microVM does not use the native libraries. 
+
+For example, it's a plug and play system. Plug and play system. It's basically, you instal it and you use the service.
+
+You plug and you play, you plug and you plug, you attach it, you attach it or you host it, and then you serve the services directly without using any, only the native tools that are provided by a target language, like a programming language. An example I'm going to give you is docker. The problem with pro docker is that docker containerise everything, but uses windows containers or uses windows containers or linux containers to contain for an instance of architecture.
+
+That is a middleman in the problem. It's just containerised windows or linux based on a platform. A microVM is a platform independent, platform agnostic.
+
+It doesn't care about the platform. It's a micro virtual machine on a platform. I'm trying to cross the purpose of how this works. 
+
+It works in an isolated environment, allows you to swap and swap as a hot swap services or hot swap features or language features. By plug, I mean literally you take it up. By plug, I mean you instal it, download it, and by play, I mean you just get started running in the native applicant in the you want to use the web browser. 
+
+If the web browser is an environment, what is a microVM doing in that environment? It can use it to run simulations or emulations of the environment. But a microVM is an architectural principle of the system. It's a consideration of the architectural principle that makes sure it's working the way it does. 
+
+How does it work practically? You have a project workspace. A project workspace is the root of the project. For example, you have a project name, project name, four slides project name, but they share the same name. 
+
+So a project name is a root folder and the sub project name, project name is a root folder. The project workspace is the root folder and operating workspace and the project name. The project can be installed directly from the project workspace because the project workspace is associated with that project.
+
+So let me have a workspace, four slides project, that'll be a workspace name, four slides project, and that'll be installable via the candidate of the workspace. Now, how does this ensure isolation? It's a simple principle. The project contains a source code, but you have to zip the workspace, you have to zip the project, you have to zip the workspace. 
+
+Your goal is to zip the workspace and by making the workspace an archive, you are protecting it from the host environment. The principle works because you can drag and drop the folder of the zip folder. So you have a project root, which is the workspace, you have a project name, which is the project name itself, and you have the root divided by the workspace.
+
+So you can enter the root, four slides, root or workspace, four slides project name, and putting them to be one project in the workspace or one VM. So how does this work? The project contains the root source code and the projects are services offered by the VM. The VM is the VM or virtual machine, it's actual root workspace that opens to the commands everything. 
+
+So the workspace is a zip folder that can be unpacked and that zip folder allows you to run native, allows, gives a piece of the system so you can have a native shell or kernel, have some kind of kernel implementation of a system. So this is really a design principle for hierarchical folders. Use python-m pip instal workspace.projects or project A or python-m pip instal workspace.project2 or project B. It isolates a web port. 
+
+For example, if you want to instal a service here, you have a decentralised and distributed model of doing this. It's basically decentralised and distributed model. It's like docker. 
+
+Basically, it's like docker because docker hosts, isolates processes. What a micro-vm does, docker contains projects so they can run natively. Docker is a container service, so docker can spin up a windows container or a linux container. 
+
+But what a micro-vm does is offer or localise a native distributed virtual machine which we call a micro-vm, a micro-virtual machine to host the target of the system. For example, you have this orchestration here. You have the workspace root and of course, we're going to do two packages, component A and component B. Now, component B exposes services to the, they have component A. Basically, the workspace is a process id and the process id can start services. 
+
+So if the component A is a service, the workspace starts that service of that component and that is a native service that can be on the server. So the workspace is hosted on a server as a zip instrument, as a zip archive. And how you connect the system is by making control by running the process id, by hosting it with a process id.
+
+The process can be any process. Basically, it has a process id and the process id has a service. So component one represents a service. 
+
+Component two represents a service. This can be package indexes of the same system that runs a web component. Applications are, you can run a modal, you can run a service called a modal or card, a card repository. 
+
+Basically, these are primitive ways to do it. But you know, if you want to run a modal, a modal component that registers the real world telemetry, that without a polyglot system, the zip will be installed and will be on a server. So it's a web service, basically. 
+
+So the web service is a server and the web service will know that component A and component one and two are packages or native packages to Python, Node, JavaScript, you know, that interact with the front-end function interface. You can also consume shared object libraries or WASM in real time, you know. Don't have to wait for a new railroad because anything in real time is allowed distributed and distributed operation, you know. 
+
+And if it's an ISO service mesh that can be used, such as peer-to-peer-to-peer or three-peer-to-peer-to-peer topology, for yes, no, and maybe, and distributed governance workflow, you can have a terminal. So applications like run a terminal in the browser that's a micro-VM, because that terminal goes into a system that can be controlled by a command and control system. So you can even use your own terminal command and control system. 
+
+Like, you know, you reverse proxy a shell to a service and that service is on your computer. So imagine two laptops, A and B, Alice's laptop being controlled by Bob's laptop over the IP protocol because the reverse shell being attached to Alice's laptop and Bob can authenticate Alice, like, you know, like a tax rabbit. I prefer the term tax rabbit because tax rabbits are the system one should use them for.
+
+So in all honesty, this is a primitive version of the system. As you can see here, you have a workspace folder, root workspace A, subprocess A, subprocess D, or you can have just two services. This is a process ID for services. 
+
+This is from the web. So this is service one and service two. And this is working on a root workspace. 
+
+As you can see, the root workspace here allows for, you know, the server to, you know, this is just a package. This is one package. The components are exposed. 
+
+So this is a way you can plug and play. So we can plug in component one and component two, which are basically used for micro-VM isolation or component isolation in real time in production development, you know. But, you know, you can take any kind of dynamic user language library and use it because it's a platform. 
+
+You need to get any kind of build library. So there's a shared object library and expose it to a native interface. There's component one or two that consumes it and delivers real-time feedback loop, kind of cybersecurity feedback loop, to the system. 
+
+So, for example, if you're writing code, so if you're writing, if you're writing code, you have a real-time editor that shows people how to code on the system, you know, as they are typing it without including any kind of artefacts, you know, because, you know, the DLL can be consumed natively, but it's because platform agnostic micro-virtualisation. And it works in the browser. This is my implementation of it. 
+
+So it's micro-agnostic. It's a micro-agnostic system. And this is the beauty of it.
+
+So you can instal it directly and it will work natively without any, so you can extend it to Python or Node or Lua or TypeScript or any language you so choose and continue to develop. It's called a micro-virtual machine. It's a distributed way of working with artefacts, with a native language artefact, a programming language artefact. 
+
+Thank you for watching this video.
+
+(Transcribed by TurboScribe. Go Unlimited to remove this message.)

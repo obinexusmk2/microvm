@@ -1,0 +1,16 @@
+.runtime/
+build/
+dist/
+.pkg-venv/
+.wheel-test-venv*/
+.wheel-bundle*/
+w/
+microvm-wheel-*/
+__pycache__/
+tests/__pycache__/
+*.pyc
+*.microvm.zip
+*.egg-info/
+.pytest_cache/
+.coverage
+examples/pong-microvm/components/u-agent/u_stats.json

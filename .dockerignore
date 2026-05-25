@@ -1,0 +1,68 @@
+# VCS
+.git/
+.gitignore
+.github/
+.gitlab-ci.yml
+.gitlab/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.Python
+dist/
+build/
+.eggs/
+*.whl
+.pytest_cache/
+.coverage
+.tox/
+.hypothesis/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Runtime & state
+.runtime/
+.microvm/
+
+# Large documentation & examples (not needed in image)
+docs/
+examples/
+tests/
+*.md
+ARCHITECTURE.md
+README.md
+CHANGELOG.md
+LICENSE
+
+# CI/CD
+.circleci/
+appveyor.yml
+.travis.yml
+
+# Misc
+*.log
+*.pid
+.cache/

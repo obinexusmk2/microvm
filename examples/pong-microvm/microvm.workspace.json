@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "0.1",
+  "name": "pong-microvm",
+  "version": "0.1.0",
+  "allowedRuntimes": ["python"],
+  "permissions": {
+    "network": {
+      "outbound": true,
+      "ports": [8890, 8891, 8892, 8893, 8894]
+    },
+    "filesystem": [
+      {
+        "path": "./components/u-agent",
+        "access": "read-write"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "matchmaking",
+      "runtime": "python",
+      "workingDirectory": "./components/matchmaking",
+      "command": ["python", "server.py"],
+      "ports": [8891],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8891/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 3
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${MICROVM_HOST_ROOT}",
+        "PONG_MATCHMAKING_PORT": "8891"
+      }
+    },
+    {
+      "name": "polycall",
+      "runtime": "python",
+      "workingDirectory": "./components/polycall",
+      "command": ["python", "server.py"],
+      "ports": [8892],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8892/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 3
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${MICROVM_HOST_ROOT}",
+        "PONG_REPO_ROOT": "${MICROVM_HOST_ROOT}",
+        "PONG_POLYCALL_PORT": "8892"
+      }
+    },
+    {
+      "name": "voice",
+      "runtime": "python",
+      "workingDirectory": "./components/voice",
+      "command": ["python", "server.py"],
+      "ports": [8893],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8893/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 3
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${MICROVM_HOST_ROOT}",
+        "PONG_VOICE_PORT": "8893"
+      }
+    },
+    {
+      "name": "u-agent",
+      "runtime": "python",
+      "workingDirectory": "./components/u-agent",
+      "command": ["python", "server.py"],
+      "ports": [8894],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8894/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 3
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${MICROVM_HOST_ROOT}",
+        "PONG_U_AGENT_PORT": "8894"
+      }
+    },
+    {
+      "name": "web",
+      "runtime": "python",
+      "workingDirectory": "./components/web",
+      "command": ["python", "server.py"],
+      "ports": [8890],
+      "dependsOn": ["matchmaking", "polycall", "voice", "u-agent"],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8890/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 3
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${MICROVM_HOST_ROOT}",
+        "PONG_WEB_PORT": "8890",
+        "PONG_MATCHMAKING_URL": "http://127.0.0.1:8891",
+        "PONG_POLYCALL_URL": "http://127.0.0.1:8892",
+        "PONG_VOICE_URL": "http://127.0.0.1:8893",
+        "PONG_U_AGENT_URL": "http://127.0.0.1:8894"
+      }
+    }
+  ]
+}

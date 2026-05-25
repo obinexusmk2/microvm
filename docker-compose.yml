@@ -1,0 +1,26 @@
+services:
+  microvm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: microvm-cli
+    volumes:
+      # Mount workspace examples for development
+      - ./examples:/app/examples
+      # Runtime state directory
+      - microvm-runtime:/home/microvm/.microvm
+      # Logs directory
+      - microvm-logs:/home/microvm/.microvm/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    entrypoint: microvm
+    command: --help
+    # Uncomment for interactive development:
+    # stdin_open: true
+    # tty: true
+    
+volumes:
+  microvm-runtime:
+    driver: local
+  microvm-logs:
+    driver: local

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microvm"
+version = "0.2.0"
+description = "Portable workspace runtime prototype with MMUKO and PolyCall Pong demo."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "OBINexus / NSIGII" }
+]
+license = "LicenseRef-OBINexus-NT-Open-Access"
+license-files = ["LICENSE.md"]
+keywords = ["microvm", "workspace", "runtime", "polycall", "obinexus"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: System :: Distributed Computing",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1",
+  "twine>=5",
+]
+
+[project.scripts]
+microvm = "microvm.cli:main"
+
+[project.urls]
+Homepage = "https://pypi.org/project/microvm/"
+
+[tool.setuptools]
+packages = ["microvm"]
+include-package-data = true

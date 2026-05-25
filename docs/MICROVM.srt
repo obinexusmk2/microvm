@@ -1,0 +1,1067 @@
+1
+00:00:00,460 --> 00:00:05,720
+(Transcribed by TurboScribe. Go Unlimited to remove this message.) 9.43pm. So I'm gonna define this properly.
+
+2
+00:00:08,680 --> 00:00:09,960
+What do you mean by properly?
+
+3
+00:00:12,620 --> 00:00:13,520
+What do you mean by properly?
+
+4
+00:00:15,600 --> 00:00:18,160
+I'm going to be defining a microVM.
+
+5
+00:00:19,520 --> 00:00:26,190
+A microVM is, let's talk about the fundamental
+
+6
+00:00:26,190 --> 00:00:29,190
+problems of microVM.
+
+7
+00:00:30,210 --> 00:00:32,550
+What is the fundamental problem of microVM?
+
+8
+00:00:32,970 --> 00:00:34,330
+A micro virtual machine.
+
+9
+00:00:38,720 --> 00:00:47,220
+A micro a native service in an unsupported
+
+10
+00:00:47,220 --> 00:00:47,680
+environment.
+
+11
+00:00:48,700 --> 00:00:51,300
+How to run a native service in an
+
+12
+00:00:51,300 --> 00:00:52,120
+unsupported environment?
+
+13
+00:00:53,740 --> 00:00:54,760
+That's the question.
+
+14
+00:00:54,860 --> 00:00:55,600
+What is a microVM?
+
+15
+00:00:56,560 --> 00:01:00,380
+A microVM allows you to run an unsupported
+
+16
+00:01:01,520 --> 00:01:04,500
+service in an unsupported, a native service in
+
+17
+00:01:04,500 --> 00:01:05,280
+an unsupported environment.
+
+18
+00:01:05,780 --> 00:01:07,420
+It's micro-isolation.
+
+19
+00:01:10,140 --> 00:01:15,760
+Primarily, a microVM serves as not a bridge
+
+20
+00:01:15,760 --> 00:01:19,620
+but actual native service in an isolated environment,
+
+21
+00:01:21,200 --> 00:01:24,360
+in an unsupported, isolated environment.
+
+22
+00:01:26,620 --> 00:01:29,760
+It works because it's beautiful.
+
+23
+00:01:30,360 --> 00:01:31,400
+It's a continualization.
+
+24
+00:01:32,660 --> 00:01:33,960
+It's like a docker.
+
+25
+00:01:34,760 --> 00:01:36,440
+You have docker.
+
+26
+00:01:37,160 --> 00:01:41,560
+Docker works in a way that is, docker
+
+27
+00:01:41,560 --> 00:01:47,740
+works by containing, it basically works, uses native
+
+28
+00:01:47,740 --> 00:01:50,900
+services to contain for environment.
+
+29
+00:01:51,800 --> 00:01:53,740
+A microVM doesn't use, and the difference between
+
+30
+00:01:53,740 --> 00:01:57,000
+docker and a microVM, my mispronunciation of microscript,
+
+31
+00:01:57,140 --> 00:01:58,960
+M for Mike, I for Indigo, C for
+
+32
+00:01:58,960 --> 00:02:01,780
+Charlie, R for Romeo, O for Oscar, is
+
+33
+00:02:01,780 --> 00:02:04,860
+that a microVM does not use the native
+
+34
+00:02:04,860 --> 00:02:05,440
+libraries.
+
+35
+00:02:08,090 --> 00:02:12,780
+For example, it's a plug and play system.
+
+36
+00:02:13,860 --> 00:02:15,500
+Plug and play system.
+
+37
+00:02:17,000 --> 00:02:21,180
+It's basically, you instal it and you use
+
+38
+00:02:21,180 --> 00:02:21,680
+the service.
+
+39
+00:02:22,720 --> 00:02:24,760
+You plug and you play, you plug and
+
+40
+00:02:24,760 --> 00:02:27,520
+you plug, you attach it, you attach it
+
+41
+00:02:27,520 --> 00:02:29,560
+or you host it, and then you serve
+
+42
+00:02:29,560 --> 00:02:32,980
+the services directly without using any, only the
+
+43
+00:02:32,980 --> 00:02:36,140
+native tools that are provided by a target
+
+44
+00:02:36,140 --> 00:02:37,580
+language, like a programming language.
+
+45
+00:02:40,920 --> 00:02:42,820
+An example I'm going to give you is
+
+46
+00:02:42,820 --> 00:02:43,300
+docker.
+
+47
+00:02:44,060 --> 00:02:47,100
+The problem with pro docker is that docker
+
+48
+00:02:47,100 --> 00:02:53,920
+containerise everything, but uses windows containers or uses
+
+49
+00:02:53,920 --> 00:02:56,760
+windows containers or linux containers to contain for
+
+50
+00:02:56,760 --> 00:02:57,340
+an instance of architecture.
+
+51
+00:02:57,760 --> 00:03:00,020
+That is a middleman in the problem.
+
+52
+00:03:00,140 --> 00:03:02,880
+It's just containerised windows or linux based on
+
+53
+00:03:02,880 --> 00:03:03,380
+a platform.
+
+54
+00:03:05,340 --> 00:03:11,900
+A microVM is a platform independent, platform agnostic.
+
+55
+00:03:13,180 --> 00:03:14,720
+It doesn't care about the platform.
+
+56
+00:03:15,460 --> 00:03:17,980
+It's a micro virtual machine on a platform.
+
+57
+00:03:19,200 --> 00:03:21,060
+I'm trying to cross the purpose of how
+
+58
+00:03:21,060 --> 00:03:21,480
+this works.
+
+59
+00:03:22,740 --> 00:03:28,120
+It works in an isolated environment, allows you
+
+60
+00:03:28,120 --> 00:03:30,520
+to swap and swap as a hot swap
+
+61
+00:03:30,520 --> 00:03:36,720
+services or hot swap features
+
+62
+00:03:36,720 --> 00:03:43,340
+or language features.
+
+63
+00:03:43,920 --> 00:03:46,860
+By plug, I mean literally you take it
+
+64
+00:03:46,860 --> 00:03:47,060
+up.
+
+65
+00:03:47,260 --> 00:03:51,240
+By plug, I mean you instal it, download
+
+66
+00:03:51,240 --> 00:03:53,420
+it, and by play, I mean you just
+
+67
+00:03:53,420 --> 00:03:55,260
+get started running in the native applicant in
+
+68
+00:03:55,260 --> 00:03:57,080
+the you want to use the web browser.
+
+69
+00:03:57,680 --> 00:04:03,190
+If the web browser is an environment, what
+
+70
+00:04:03,190 --> 00:04:05,430
+is a microVM doing in that environment?
+
+71
+00:04:08,560 --> 00:04:10,140
+It can use it to run simulations or
+
+72
+00:04:10,140 --> 00:04:11,500
+emulations of the environment.
+
+73
+00:04:12,660 --> 00:04:16,660
+But a microVM is an architectural principle of
+
+74
+00:04:16,660 --> 00:04:16,920
+the system.
+
+75
+00:04:17,180 --> 00:04:20,040
+It's a consideration of the architectural principle that
+
+76
+00:04:20,040 --> 00:04:22,160
+makes sure it's working the way it does.
+
+77
+00:04:26,820 --> 00:04:28,380
+How does it work practically?
+
+78
+00:04:30,340 --> 00:04:32,640
+You have a project workspace.
+
+79
+00:04:33,680 --> 00:04:37,240
+A project workspace is the root of the
+
+80
+00:04:37,240 --> 00:04:37,540
+project.
+
+81
+00:04:38,500 --> 00:04:43,120
+For example, you have a project name, project
+
+82
+00:04:43,120 --> 00:04:46,980
+name, four slides project name, but they share
+
+83
+00:04:46,980 --> 00:04:47,600
+the same name.
+
+84
+00:04:48,280 --> 00:04:49,480
+So a project name is a root folder
+
+85
+00:04:49,480 --> 00:04:52,940
+and the sub project name, project name is
+
+86
+00:04:52,940 --> 00:04:53,280
+a root folder.
+
+87
+00:04:53,720 --> 00:04:58,540
+The project workspace is the root folder and
+
+88
+00:04:58,540 --> 00:05:01,480
+operating workspace and the project name.
+
+89
+00:05:04,170 --> 00:05:11,030
+The project can be installed directly from the
+
+90
+00:05:11,030 --> 00:05:13,370
+project workspace because the project workspace is associated
+
+91
+00:05:13,370 --> 00:05:14,030
+with that project.
+
+92
+00:05:15,450 --> 00:05:17,470
+So let me have a workspace, four slides
+
+93
+00:05:17,470 --> 00:05:24,070
+project, that'll be a workspace name, four slides
+
+94
+00:05:24,070 --> 00:05:28,010
+project, and that'll be installable via the candidate
+
+95
+00:05:28,010 --> 00:05:28,810
+of the workspace.
+
+96
+00:05:30,050 --> 00:05:32,630
+Now, how does this ensure isolation?
+
+97
+00:05:34,050 --> 00:05:34,670
+It's a simple principle.
+
+98
+00:05:35,010 --> 00:05:38,550
+The project contains a source code, but you
+
+99
+00:05:38,550 --> 00:05:40,010
+have to zip the workspace, you have to
+
+100
+00:05:40,010 --> 00:05:41,610
+zip the project, you have to zip the
+
+101
+00:05:41,610 --> 00:05:41,950
+workspace.
+
+102
+00:05:43,370 --> 00:05:50,620
+Your goal is to zip the workspace and
+
+103
+00:05:50,620 --> 00:05:54,740
+by making the workspace an archive, you are
+
+104
+00:05:54,740 --> 00:05:56,340
+protecting it from the host environment.
+
+105
+00:05:57,040 --> 00:05:59,200
+The principle works because you can drag and
+
+106
+00:05:59,200 --> 00:06:02,880
+drop the folder of the zip folder.
+
+107
+00:06:06,500 --> 00:06:09,000
+So you have a project root, which is
+
+108
+00:06:09,000 --> 00:06:16,120
+the workspace, you have a project name, which
+
+109
+00:06:16,120 --> 00:06:18,420
+is the project name itself, and you have
+
+110
+00:06:18,420 --> 00:06:20,400
+the root divided by the workspace.
+
+111
+00:06:21,040 --> 00:06:22,960
+So you can enter the root, four slides,
+
+112
+00:06:23,500 --> 00:06:26,800
+root or workspace, four slides project name, and
+
+113
+00:06:26,800 --> 00:06:28,500
+putting them to be one project in the
+
+114
+00:06:28,500 --> 00:06:29,860
+workspace or one VM.
+
+115
+00:06:32,630 --> 00:06:34,510
+So how does this work?
+
+116
+00:06:35,550 --> 00:06:38,810
+The project contains the root source code and
+
+117
+00:06:38,810 --> 00:06:41,330
+the projects are services offered by the VM.
+
+118
+00:06:42,150 --> 00:06:47,950
+The VM is the VM or virtual machine,
+
+119
+00:06:49,130 --> 00:06:52,510
+it's actual root workspace that opens to the
+
+120
+00:06:52,510 --> 00:06:53,110
+commands everything.
+
+121
+00:06:53,610 --> 00:06:56,970
+So the workspace is a zip folder that
+
+122
+00:06:56,970 --> 00:07:00,590
+can be unpacked and that zip folder allows
+
+123
+00:07:00,590 --> 00:07:03,530
+you to run native, allows, gives a piece
+
+124
+00:07:03,530 --> 00:07:06,730
+of the system so you can have a
+
+125
+00:07:06,730 --> 00:07:12,980
+native shell or kernel, have some kind of
+
+126
+00:07:12,980 --> 00:07:14,140
+kernel implementation of a system.
+
+127
+00:07:15,040 --> 00:07:17,440
+So this is really a design principle for
+
+128
+00:07:17,440 --> 00:07:18,120
+hierarchical folders.
+
+129
+00:07:18,320 --> 00:07:27,880
+Use python-m pip instal workspace.projects or
+
+130
+00:07:27,880 --> 00:07:35,200
+project A or python-m pip instal workspace
+
+131
+00:07:35,200 --> 00:07:37,640
+.project2 or project B.
+
+132
+00:07:40,060 --> 00:07:41,660
+It isolates a web port.
+
+133
+00:07:41,720 --> 00:07:43,980
+For example, if you want to instal a
+
+134
+00:07:43,980 --> 00:07:47,440
+service here, you have a decentralised and distributed
+
+135
+00:07:47,440 --> 00:07:48,460
+model of doing this.
+
+136
+00:07:48,800 --> 00:07:50,760
+It's basically decentralised and distributed model.
+
+137
+00:07:55,390 --> 00:07:56,790
+It's like docker.
+
+138
+00:07:57,250 --> 00:08:00,370
+Basically, it's like docker because docker hosts, isolates
+
+139
+00:08:00,370 --> 00:08:00,810
+processes.
+
+140
+00:08:01,590 --> 00:08:07,170
+What a micro-vm does, docker contains projects
+
+141
+00:08:07,170 --> 00:08:09,650
+so they can run natively.
+
+142
+00:08:10,350 --> 00:08:13,010
+Docker is a container service, so docker can
+
+143
+00:08:13,010 --> 00:08:14,590
+spin up a windows container or a linux
+
+144
+00:08:14,590 --> 00:08:14,910
+container.
+
+145
+00:08:15,310 --> 00:08:17,830
+But what a micro-vm does is offer
+
+146
+00:08:17,830 --> 00:08:25,470
+or localise a native distributed virtual machine which
+
+147
+00:08:25,470 --> 00:08:27,710
+we call a micro-vm, a micro-virtual
+
+148
+00:08:27,710 --> 00:08:31,409
+machine to host the target of the system.
+
+149
+00:08:31,789 --> 00:08:34,669
+For example, you have this orchestration here.
+
+150
+00:08:36,110 --> 00:08:40,650
+You have the workspace root and of course,
+
+151
+00:08:40,750 --> 00:08:42,049
+we're going to do two packages, component A
+
+152
+00:08:42,049 --> 00:08:43,450
+and component B.
+
+153
+00:08:44,150 --> 00:08:47,490
+Now, component B exposes services to the, they
+
+154
+00:08:47,490 --> 00:08:48,750
+have component A.
+
+155
+00:08:49,030 --> 00:08:57,050
+Basically, the workspace is a process id and
+
+156
+00:08:57,050 --> 00:08:58,690
+the process id can start services.
+
+157
+00:08:59,550 --> 00:09:03,890
+So if the component A is a service,
+
+158
+00:09:05,070 --> 00:09:08,470
+the workspace starts that service of that component
+
+159
+00:09:08,470 --> 00:09:11,190
+and that is a native service that can
+
+160
+00:09:11,190 --> 00:09:12,670
+be on the server.
+
+161
+00:09:13,310 --> 00:09:15,410
+So the workspace is hosted on a server
+
+162
+00:09:18,000 --> 00:09:23,300
+as a zip instrument, as a zip archive.
+
+163
+00:09:24,920 --> 00:09:27,440
+And how you connect the system is by
+
+164
+00:09:27,440 --> 00:09:36,950
+making control by running the process id, by
+
+165
+00:09:36,950 --> 00:09:38,370
+hosting it with a process id.
+
+166
+00:09:39,630 --> 00:09:41,310
+The process can be any process.
+
+167
+00:09:41,770 --> 00:09:43,150
+Basically, it has a process id and the
+
+168
+00:09:43,150 --> 00:09:44,050
+process id has a service.
+
+169
+00:09:44,710 --> 00:09:47,070
+So component one represents a service.
+
+170
+00:09:48,490 --> 00:09:50,110
+Component two represents a service.
+
+171
+00:09:50,770 --> 00:09:52,730
+This can be package indexes of the same
+
+172
+00:09:52,730 --> 00:09:55,910
+system that runs a web component.
+
+173
+00:09:57,090 --> 00:10:04,600
+Applications are, you can run a modal, you
+
+174
+00:10:04,600 --> 00:10:06,320
+can run a service called a modal or
+
+175
+00:10:06,320 --> 00:10:09,640
+card, a card repository.
+
+176
+00:10:10,380 --> 00:10:11,780
+Basically, these are primitive ways to do it.
+
+177
+00:10:12,400 --> 00:10:14,360
+But you know, if you want to run
+
+178
+00:10:14,360 --> 00:10:19,700
+a modal, a modal component that registers the
+
+179
+00:10:19,700 --> 00:10:24,020
+real world telemetry, that without a polyglot system,
+
+180
+00:10:25,060 --> 00:10:27,780
+the zip will be installed and will be
+
+181
+00:10:27,780 --> 00:10:28,460
+on a server.
+
+182
+00:10:28,940 --> 00:10:30,980
+So it's a web service, basically.
+
+183
+00:10:31,380 --> 00:10:34,280
+So the web service is a server and
+
+184
+00:10:34,280 --> 00:10:36,840
+the web service will know that component A
+
+185
+00:10:36,840 --> 00:10:39,820
+and component one and two are packages or
+
+186
+00:10:39,820 --> 00:10:43,260
+native packages to Python, Node, JavaScript, you know,
+
+187
+00:10:43,560 --> 00:10:45,740
+that interact with the front-end function interface.
+
+188
+00:10:47,500 --> 00:10:55,420
+You can also consume shared object libraries or
+
+189
+00:10:55,420 --> 00:10:57,640
+WASM in real time, you know.
+
+190
+00:10:57,960 --> 00:10:59,160
+Don't have to wait for a new railroad
+
+191
+00:10:59,160 --> 00:11:02,000
+because anything in real time is allowed distributed
+
+192
+00:11:02,000 --> 00:11:03,580
+and distributed operation, you know.
+
+193
+00:11:04,360 --> 00:11:06,760
+And if it's an ISO service mesh that
+
+194
+00:11:06,760 --> 00:11:08,420
+can be used, such as peer-to-peer
+
+195
+00:11:08,420 --> 00:11:11,020
+-to-peer or three-peer-to-peer-to
+
+196
+00:11:11,020 --> 00:11:14,560
+-peer topology, for yes, no, and maybe, and
+
+197
+00:11:14,560 --> 00:11:23,690
+distributed governance workflow, you can have a terminal.
+
+198
+00:11:23,870 --> 00:11:25,710
+So applications like run a terminal in the
+
+199
+00:11:25,710 --> 00:11:30,090
+browser that's a micro-VM, because that terminal
+
+200
+00:11:30,090 --> 00:11:33,290
+goes into a system that can be controlled
+
+201
+00:11:33,290 --> 00:11:34,870
+by a command and control system.
+
+202
+00:11:35,190 --> 00:11:36,270
+So you can even use your own terminal
+
+203
+00:11:36,270 --> 00:11:37,190
+command and control system.
+
+204
+00:11:37,690 --> 00:11:42,250
+Like, you know, you reverse proxy a shell
+
+205
+00:11:42,250 --> 00:11:44,970
+to a service and that service is on
+
+206
+00:11:44,970 --> 00:11:45,490
+your computer.
+
+207
+00:11:46,190 --> 00:11:49,630
+So imagine two laptops, A and B, Alice's
+
+208
+00:11:49,630 --> 00:11:52,190
+laptop being controlled by Bob's laptop over the
+
+209
+00:11:52,190 --> 00:11:59,650
+IP protocol because the reverse shell being attached
+
+210
+00:11:59,650 --> 00:12:04,290
+to Alice's laptop and Bob can authenticate Alice,
+
+211
+00:12:04,510 --> 00:12:06,850
+like, you know, like a tax rabbit.
+
+212
+00:12:09,270 --> 00:12:12,070
+I prefer the term tax rabbit because tax
+
+213
+00:12:12,070 --> 00:12:14,410
+rabbits are the system one should use them
+
+214
+00:12:14,410 --> 00:12:14,630
+for.
+
+215
+00:12:15,290 --> 00:12:18,630
+So in all honesty, this is a primitive
+
+216
+00:12:18,630 --> 00:12:19,690
+version of the system.
+
+217
+00:12:21,450 --> 00:12:23,050
+As you can see here, you have a
+
+218
+00:12:23,050 --> 00:12:28,470
+workspace folder, root workspace A, subprocess A, subprocess
+
+219
+00:12:28,470 --> 00:12:30,170
+D, or you can have just two services.
+
+220
+00:12:30,310 --> 00:12:32,230
+This is a process ID for services.
+
+221
+00:12:32,730 --> 00:12:33,570
+This is from the web.
+
+222
+00:12:33,890 --> 00:12:35,150
+So this is service one and service two.
+
+223
+00:12:36,150 --> 00:12:37,910
+And this is working on a root workspace.
+
+224
+00:12:38,430 --> 00:12:40,170
+As you can see, the root workspace here
+
+225
+00:12:40,170 --> 00:12:46,850
+allows for, you know, the server to, you
+
+226
+00:12:46,850 --> 00:12:47,770
+know, this is just a package.
+
+227
+00:12:47,910 --> 00:12:48,750
+This is one package.
+
+228
+00:12:49,130 --> 00:12:50,630
+The components are exposed.
+
+229
+00:12:51,030 --> 00:12:51,870
+So this is a way you can plug
+
+230
+00:12:51,870 --> 00:12:52,270
+and play.
+
+231
+00:12:52,870 --> 00:12:54,350
+So we can plug in component one and
+
+232
+00:12:54,350 --> 00:12:56,730
+component two, which are basically used for micro
+
+233
+00:12:56,730 --> 00:13:00,890
+-VM isolation or component isolation in real time
+
+234
+00:13:00,890 --> 00:13:02,210
+in production development, you know.
+
+235
+00:13:02,930 --> 00:13:06,990
+But, you know, you can take any kind
+
+236
+00:13:06,990 --> 00:13:10,830
+of dynamic user language library and use it
+
+237
+00:13:10,830 --> 00:13:12,670
+because it's a platform.
+
+238
+00:13:12,850 --> 00:13:14,270
+You need to get any kind of build
+
+239
+00:13:14,270 --> 00:13:14,770
+library.
+
+240
+00:13:15,170 --> 00:13:18,150
+So there's a shared object library and expose
+
+241
+00:13:18,150 --> 00:13:19,570
+it to a native interface.
+
+242
+00:13:20,570 --> 00:13:22,470
+There's component one or two that consumes it
+
+243
+00:13:22,470 --> 00:13:26,550
+and delivers real-time feedback loop, kind of
+
+244
+00:13:26,550 --> 00:13:28,490
+cybersecurity feedback loop, to the system.
+
+245
+00:13:29,290 --> 00:13:31,350
+So, for example, if you're writing code, so
+
+246
+00:13:31,350 --> 00:13:34,410
+if you're writing, if you're writing code, you
+
+247
+00:13:34,410 --> 00:13:38,130
+have a real-time editor that shows people
+
+248
+00:13:38,850 --> 00:13:41,490
+how to code on the system, you know,
+
+249
+00:13:41,590 --> 00:13:44,630
+as they are typing it without including any
+
+250
+00:13:44,630 --> 00:13:46,850
+kind of artefacts, you know, because, you know,
+
+251
+00:13:47,370 --> 00:13:51,630
+the DLL can be consumed natively, but it's
+
+252
+00:13:51,630 --> 00:13:54,430
+because platform agnostic micro-virtualisation.
+
+253
+00:13:56,090 --> 00:13:57,050
+And it works in the browser.
+
+254
+00:13:57,130 --> 00:13:57,970
+This is my implementation of it.
+
+255
+00:13:58,150 --> 00:14:00,010
+So it's micro-agnostic.
+
+256
+00:14:00,410 --> 00:14:01,910
+It's a micro-agnostic system.
+
+257
+00:14:04,680 --> 00:14:05,740
+And this is the beauty of it.
+
+258
+00:14:05,880 --> 00:14:08,440
+So you can instal it directly and it
+
+259
+00:14:08,440 --> 00:14:11,080
+will work natively without any, so you can
+
+260
+00:14:11,080 --> 00:14:13,240
+extend it to Python or Node or Lua
+
+261
+00:14:13,240 --> 00:14:15,520
+or TypeScript or any language you so choose
+
+262
+00:14:15,520 --> 00:14:16,340
+and continue to develop.
+
+263
+00:14:16,540 --> 00:14:18,700
+It's called a micro-virtual machine.
+
+264
+00:14:20,480 --> 00:14:24,180
+It's a distributed way of working with artefacts,
+
+265
+00:14:24,580 --> 00:14:31,000
+with a native language artefact, a programming language
+
+266
+00:14:31,000 --> 00:14:31,220
+artefact.
+
+267
+00:14:31,800 --> 00:14:32,980
+Thank you for watching this video.

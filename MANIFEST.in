@@ -1,0 +1,15 @@
+include README.md
+include ARCHITECTURE.md
+include Dockerfile
+include docker-compose.yml
+include LICENSE.md
+include microvm_cli.py
+recursive-include docs *
+recursive-include examples *
+recursive-include tests *.py
+global-exclude *.py[cod]
+global-exclude *.microvm.zip
+global-exclude __pycache__
+prune .runtime
+prune build
+prune dist

@@ -1,18 +1,33 @@
 # microvm
 
 A lightweight microservice VM framework for distributed applications.
-https://drive.google.com/drive/folders/10xjI_X6oEQlOt9C6exkAL0xe74SatQnK?usp=drive_link 
 
 ## Installation
 
-Install the package for development:
+Install MicroVM from PyPI:
 
 ```powershell
-python -m pip install -e /workspace/microvm
+python -m pip install microvm
 microvm --help
 ```
 
+For local development from a checkout:
+
+```powershell
+python -m pip install -e C:\Users\Public\Public\microvm[dev]
+```
+
 ## Quick Start
+
+### Extract Bundled Examples
+
+The PyPI package includes the repository docs, examples, and demo assets. Copy
+them into a working directory before running the example workspaces:
+
+```powershell
+microvm bundle list
+microvm bundle extract C:\Users\Public\Public\microvm-bundle
+```
 
 ### Inspect a Workspace
 
@@ -55,3 +70,18 @@ http://127.0.0.1:8890
 ```powershell
 python -m unittest C:\Users\Public\Public\microvm\tests\test_microvm_cli.py
 python -m unittest discover C:\Users\Public\Public\microvm\tests
+```
+
+## Build and Publish
+
+Build local distribution artifacts:
+
+```powershell
+python -m build
+python -m twine check dist/*
+```
+
+Publish to TestPyPI first, then PyPI, using trusted publishing or local
+credentials. Do not commit package tokens or API keys.
+
+

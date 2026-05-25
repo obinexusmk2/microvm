@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "0.1",
+  "name": "python-demo",
+  "version": "0.1.0",
+  "allowedRuntimes": ["python"],
+  "permissions": {
+    "network": {
+      "outbound": false,
+      "ports": [8765]
+    },
+    "filesystem": []
+  },
+  "components": [
+    {
+      "name": "api",
+      "runtime": "python",
+      "workingDirectory": "./components/api",
+      "command": ["python", "server.py"],
+      "ports": [8765],
+      "healthCheck": {
+        "type": "http",
+        "url": "http://127.0.0.1:8765/health",
+        "intervalSeconds": 1,
+        "timeoutSeconds": 2
+      },
+      "environment": {
+        "PYTHONUNBUFFERED": "1",
+        "MICROVM_DEMO_PORT": "8765"
+      }
+    }
+  ]
+}

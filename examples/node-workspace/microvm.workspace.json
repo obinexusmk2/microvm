@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "name": "node-demo",
+  "version": "0.1.0",
+  "allowedRuntimes": ["node"],
+  "permissions": {
+    "network": {
+      "outbound": false,
+      "ports": []
+    },
+    "filesystem": []
+  },
+  "components": [
+    {
+      "name": "worker",
+      "runtime": "node",
+      "workingDirectory": "./components/worker",
+      "command": ["node", "index.js"],
+      "stdio": true,
+      "environment": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

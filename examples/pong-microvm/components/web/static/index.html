@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MicroVM Pong</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <canvas id="game" aria-label="MicroVM Pong canvas"></canvas>
+    <main class="hud">
+      <section class="topbar">
+        <div class="brand">
+          <span class="mark">M</span>
+          <div>
+            <h1>MicroVM Pong</h1>
+            <p id="connectionLine">NOSIGNAL</p>
+          </div>
+        </div>
+        <div class="scorebox">
+          <span id="p1Name">player 1</span>
+          <strong id="score">0 : 0</strong>
+          <span id="p2Name">player 2u</span>
+        </div>
+        <div class="actions">
+          <select id="targetScore" aria-label="Target score">
+            <option value="5">best of 5</option>
+            <option value="10">best of 10</option>
+            <option value="15">best of 15</option>
+          </select>
+          <button id="practiceBtn" type="button">Practice u</button>
+          <button id="scanBtn" type="button">Scan</button>
+          <button id="voiceBtn" type="button">Voice</button>
+        </div>
+      </section>
+
+      <section class="sidepanel">
+        <div class="status-grid">
+          <div>
+            <span>MMUKO</span>
+            <strong id="mmukoState">NOSIGNAL</strong>
+          </div>
+          <div>
+            <span>PolyCall</span>
+            <strong id="polycallState">checking</strong>
+          </div>
+          <div>
+            <span>Tries</span>
+            <strong id="tries">3</strong>
+          </div>
+        </div>
+        <div id="players" class="players"></div>
+        <div id="eventLog" class="event-log"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
